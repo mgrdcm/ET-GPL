@@ -3,6 +3,7 @@
 	20286C28FDCF999611CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Development;
 		activeExecutable = 31D9B743131389B6005BF4D9 /* WolfET */;
+		activeSDKPreference = macosx10.6;
 		activeTarget = 8D0C4E890486CD37000505A6 /* WolfET */;
 		codeSenseManager = 31D9B75E131389C5005BF4D9 /* Code sense */;
 		executables = (
