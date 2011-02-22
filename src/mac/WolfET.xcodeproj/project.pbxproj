@@ -779,7 +779,15 @@
 		20286C28FDCF999611CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = B7F5F9A00B3F0B1300EE1F7B /* Build configuration list for PBXProject "WolfET" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 20286C29FDCF999611CA2CEA /* WolfET */;
 			projectDirPath = "";
 			projectReferences = (
@@ -796,6 +804,7 @@
 					ProjectRef = B7606E180B472DB400342ECC /* ui.xcodeproj */;
 				},
 			);
+			projectRoot = "";
 			targets = (
 				8D0C4E890486CD37000505A6 /* WolfET */,
 			);
