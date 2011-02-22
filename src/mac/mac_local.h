@@ -226,6 +226,9 @@ qboolean Sys_ConsoleEvent( EventRecord *event, RgnHandle cursRgn );
 
 void Sys_SendStringToConsole( const char *inString );
 
+// copied from MacTextEditor.h
+#define kTXNDefaultFontName             ((StringPtr)NULL)
+
 #ifdef __cplusplus
 }
 #endif

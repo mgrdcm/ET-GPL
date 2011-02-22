@@ -89,9 +89,6 @@
 		F545A20F07B8CFDD00CAB2B8 /* jmemnobs.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A1E007B8CFDD00CAB2B8 /* jmemnobs.c */; };
 		F545A21007B8CFDD00CAB2B8 /* jmemmgr.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A1E107B8CFDD00CAB2B8 /* jmemmgr.c */; };
 		F545A21107B8CFDD00CAB2B8 /* jfdctflt.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A1E207B8CFDD00CAB2B8 /* jfdctflt.c */; };
-		F545A21707B8D00B00CAB2B8 /* pbcl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F545A21407B8D00B00CAB2B8 /* pbcl.cpp */; };
-		F545A21807B8D00B00CAB2B8 /* pbsv.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F545A21507B8D00B00CAB2B8 /* pbsv.cpp */; };
-		F545A21907B8D00B00CAB2B8 /* pbmd5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F545A21607B8D00B00CAB2B8 /* pbmd5.cpp */; };
 		F545A22F07B8D07600CAB2B8 /* files.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A21E07B8D07600CAB2B8 /* files.c */; };
 		F545A23007B8D07600CAB2B8 /* dl_main_curl.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A21F07B8D07600CAB2B8 /* dl_main_curl.c */; };
 		F545A23107B8D07600CAB2B8 /* vm_interpreted.c in Sources */ = {isa = PBXBuildFile; fileRef = F545A22007B8D07600CAB2B8 /* vm_interpreted.c */; };
@@ -950,9 +947,6 @@
 				F545A20F07B8CFDD00CAB2B8 /* jmemnobs.c in Sources */,
 				F545A21007B8CFDD00CAB2B8 /* jmemmgr.c in Sources */,
 				F545A21107B8CFDD00CAB2B8 /* jfdctflt.c in Sources */,
-				F545A21707B8D00B00CAB2B8 /* pbcl.cpp in Sources */,
-				F545A21807B8D00B00CAB2B8 /* pbsv.cpp in Sources */,
-				F545A21907B8D00B00CAB2B8 /* pbmd5.cpp in Sources */,
 				F545A22F07B8D07600CAB2B8 /* files.c in Sources */,
 				F545A23007B8D07600CAB2B8 /* dl_main_curl.c in Sources */,
 				F545A23107B8D07600CAB2B8 /* vm_interpreted.c in Sources */,
@@ -1058,7 +1052,6 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -1081,7 +1074,6 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1101,7 +1093,6 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SYSTEM_DEVELOPER_DIR)/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MacPrefixMach.h;
@@ -1126,6 +1117,8 @@
 					ppc,
 					i386,
 				);
+				GCC_VERSION = 4.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-lcurl";
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
 			};

@@ -205,9 +205,9 @@ GLimp_AglDescribe_f
 ===================
 */
 void GLimp_AglDescribe_f( void ) {
-	long value;
-	long r,g,b,a;
-	long stencil, depth;
+	GLint value;
+	GLint r,g,b,a;
+	GLint stencil, depth;
 
 	VID_Printf( PRINT_ALL, "Selected pixel format 0x%x\n", (int)sys_gl.fmt );
 
@@ -506,7 +506,7 @@ static void GLimp_Extensions( void ) {
 			qglClientActiveTextureARB = glClientActiveTextureARB;
 
 			if ( qglActiveTextureARB ) {
-				qglGetIntegerv( GL_MAX_ACTIVE_TEXTURES_ARB, (long *)&glConfig.maxActiveTextures );
+				qglGetIntegerv( GL_MAX_ACTIVE_TEXTURES_ARB, (GLint *)&glConfig.maxActiveTextures );
 
 				if ( glConfig.maxActiveTextures > 1 ) {
 					VID_Printf( PRINT_ALL, "...using GL_ARB_multitexture\n" );
@@ -652,7 +652,7 @@ static void GLimp_Extensions( void ) {
 	// Enable FSAA on ATi cards
 	if ( IsRadeon() /*&& gSystemVersion >= 0x0922*/ ) {
 		GLenum err;
-		aglSetInteger( sys_gl.context, ATI_FSAA_SAMPLES, (const long*)&r_ati_fsaa_samples->integer );
+		aglSetInteger( sys_gl.context, ATI_FSAA_SAMPLES, (const GLint*)&r_ati_fsaa_samples->integer );
 
 		// Flush AGL_BAD_ENUM, which can occur if we're using older OS/drivers
 		err = aglGetError();
@@ -765,7 +765,7 @@ Q3DEF void GLimp_Init( void ) {
 	Q_strncpyz( glConfig.extensions_string, (const char *)qglGetString( GL_EXTENSIONS ), sizeof( glConfig.extensions_string ) );
 #endif
 
-	qglGetIntegerv( GL_MAX_TEXTURE_SIZE, (long *)&glConfig.maxTextureSize );
+	qglGetIntegerv( GL_MAX_TEXTURE_SIZE, (GLint *)&glConfig.maxTextureSize );
 	// stubbed or broken drivers may have reported 0...
 	if ( glConfig.maxTextureSize <= 0 ) {
 		glConfig.maxTextureSize = 0;
@@ -860,7 +860,7 @@ Q3DEF void GLimp_EndFrame( void ) {
 	if ( r_swapInterval->modified ) {
 		r_swapInterval->modified = qfalse;
 		VID_Printf( PRINT_ALL, "Changing AGL_SWAP_INTERVAL\n" );
-		aglSetInteger( sys_gl.context, AGL_SWAP_INTERVAL, (long *)&r_swapInterval->integer );
+		aglSetInteger( sys_gl.context, AGL_SWAP_INTERVAL, (GLint *)&r_swapInterval->integer );
 	}
 
 	if ( r_ati_fsaa_samples->modified ) { //DAJ added changed for ati fsaa
@@ -869,7 +869,7 @@ Q3DEF void GLimp_EndFrame( void ) {
 			if ( r_ati_fsaa_samples->integer == 1 || r_ati_fsaa_samples->integer == 2 || r_ati_fsaa_samples->integer == 4 ) {
 				GLenum err;
 				VID_Printf( PRINT_ALL, "Changing ATI FSAA samples to %d\n", r_ati_fsaa_samples->integer );
-				aglSetInteger( sys_gl.context, ATI_FSAA_SAMPLES,    (const long*)&r_ati_fsaa_samples->integer );
+				aglSetInteger( sys_gl.context, ATI_FSAA_SAMPLES,    (const GLint*)&r_ati_fsaa_samples->integer );
 
 				// Flush AGL_BAD_ENUM, which can occur if we're using older OS/drivers
 				err = aglGetError();
@@ -967,7 +967,7 @@ void        GLimp_SetGamma( unsigned char red[256],
 qboolean GLimp_ChangeMode( int mode ) {
 	int colorDepth, zDepth;
 	int fsaaSamples;
-	long value;
+	GLint value;
 
 	// get mode info
 	mode = r_mode->integer;
