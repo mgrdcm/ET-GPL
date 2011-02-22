@@ -1116,10 +1116,7 @@
 		B7F5F9A10B3F0B1300EE1F7B /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = ppc;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
@@ -1131,10 +1128,7 @@
 		B7F5F9A20B3F0B1300EE1F7B /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				ARCHS = ppc;
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-lcurl";
@@ -1145,6 +1139,7 @@
 		B7F5F9A30B3F0B1300EE1F7B /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = ppc;
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
 				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
