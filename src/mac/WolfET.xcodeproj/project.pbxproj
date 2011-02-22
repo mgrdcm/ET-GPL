@@ -1117,6 +1117,7 @@
 					ppc,
 					i386,
 				);
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
 				GCC_VERSION = 4.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
 				OTHER_LDFLAGS = "-lcurl";
